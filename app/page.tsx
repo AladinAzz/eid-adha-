@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Heart, Star, Sparkles, Gift } from "lucide-react"
+import { Heart, Star, Sparkles, Gift, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -31,7 +31,7 @@ export default function EidAdhaWebsite() {
   }, [])
 
   const eidWishes = [
-    "عيد أضحى مبارك وكل عام وأنتِ بخير",
+    "عيد أضحى مبارك وكل عام وأنتم بخير",
     "أسأل الله أن يتقبل منا ومنكم صالح الأعمال",
     "بارك الله لكِ في هذا العيد المبارك",
     "عيد سعيد مليء بالفرح والبركات",
@@ -158,12 +158,6 @@ export default function EidAdhaWebsite() {
                             </div>
                           </div>
 
-                          <div className="flex justify-center gap-4 mt-6">
-                            <div className="bg-rose-200 rounded-full px-6 py-3">
-                              <span className="text-rose-800 font-semibold font-arabic text-lg">أحبكِ يا ندى ❤️</span>
-                            </div>
-                          </div>
-
                           <div className="mt-4 flex justify-center items-center gap-2">
                             <Star className="w-4 h-4 text-amber-500" />
                             <span className="text-rose-600 font-arabic text-sm">عيد أضحى مبارك</span>
@@ -207,6 +201,21 @@ export default function EidAdhaWebsite() {
               </div>
             </CardContent>
           </Card>
+
+          {/* Telegram Contact Button */}
+          <div className="text-center">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              onClick={() => {
+                window.open("https://t.me/Aladin_azz", "_blank")
+              }}
+            >
+              <MessageCircle className="w-6 h-6 ml-2" />
+              تواصلي معي على تليجرام
+            </Button>
+            <p className="text-sm text-gray-600 mt-2 font-arabic">للرد على رسالة العيد 💙</p>
+          </div>
         </div>
 
         {/* Footer */}
